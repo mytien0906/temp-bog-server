@@ -1,0 +1,37 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: ['next/core-web-vitals', 'airbnb', 'eslint:recommended', 'prettier'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['react', 'react-hooks', '@typescript-eslint'],
+  rules: {
+    '@typescript-eslint/no-unused-vars': ['error'],
+    'implicit-arrow-linebreak': 'off',
+    'import/extensions': 'off',
+    'import/no-unresolved': 'off',
+    'linebreak-style': ['error', 'windows'],
+    'no-confusing-arrow': 'off',
+    'no-underscore-dangle': ['error', { allow: ['_id'] }],
+    'no-unused-vars': 'off',
+    'object-curly-newline': 'off',
+    'operator-linebreak': 'off',
+    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/rules-of-hooks': 'off',
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    'react/jsx-props-no-spreading': 'off',
+    'react/jsx-wrap-multilines': ['error', { declaration: false, assignment: false }],
+    'react/prop-types': 'off',
+    'react/require-default-props': 'off',
+    camelcase: 'off',
+    semi: [2, 'always'],
+  },
+};
